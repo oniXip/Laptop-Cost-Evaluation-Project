@@ -34,11 +34,13 @@ class LogScaling(BaseEstimator, TransformerMixin):
 # ────────────────────────────────────────────────────────────────
 # 1.  Paths
 # ────────────────────────────────────────────────────────────────
-HERE         = os.path.abspath(os.path.dirname(__file__))
-MODEL_DIR    = os.path.join(HERE, "model")
+PROJECT_DIR  = r"C:\\Users\\user\\Downloads\\Laptop-Cost-Evaluation-Project"
+MODEL_DIR    = os.path.join(PROJECT_DIR, "model")
+
 PREPROC_PATH = os.path.join(MODEL_DIR, "preprocessor.joblib")
-MODEL_PATH   = os.path.join(MODEL_DIR, "laptop_price_model.h5")
+MODEL_PATH   = os.path.join(MODEL_DIR, "laptop_cost_model.h5")
 META_PATH    = os.path.join(MODEL_DIR, "meta.json")
+
 # ────────────────────────────────────────────────────────────────
 # 2.  Load artefacts
 # ────────────────────────────────────────────────────────────────
