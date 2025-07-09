@@ -36,7 +36,7 @@ class LogScaling(BaseEstimator, TransformerMixin):
 # ────────────────────────────────────────────────────────────────
 # 1.  Paths
 # ────────────────────────────────────────────────────────────────
-PROJECT_DIR  = r"C:\\Users\\user\\Downloads\\Laptop-Cost-Evaluation-Project"
+PROJECT_DIR  = os.path.dirname(os.path.abspath(__file__))
 MODEL_DIR    = os.path.join(PROJECT_DIR, "model")
 
 PREPROC_PATH = os.path.join(MODEL_DIR, "preprocessor.joblib")
