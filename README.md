@@ -1,6 +1,6 @@
 # Laptop Cost Evaluation Project
 
-[![Laptop Icon](https://raw.githubusercontent.com/Kratugautam99/Laptop-Cost-Evaluation-Project/main/static/icon/laptop-icon.png)](https://github.com/Kratugautam99/Laptop-Cost-Evaluation-Project)
+[![Laptop Icon](https://raw.githubusercontent.com/Kratugautam99/Laptop-Cost-Evaluation-Project/main/static/icon/laptop_icon.png)](https://github.com/Kratugautam99/Laptop-Cost-Evaluation-Project)
 
 Live Demo → https://laptop-cost-evaluation-project.onrender.com/  
 
