@@ -8,6 +8,8 @@ from typing import Dict, List, Union
 from sklearn.compose import _column_transformer as _ct     
 from sklearn.base import BaseEstimator, TransformerMixin
 from flask import Flask, jsonify, render_template, request
+print("TensorFlow version:", tf.__version__)
+print("Is GPU available:", tf.config.list_physical_devices('GPU'))
 
 # ────────────────────────────────────────────────────────────────
 # 0.  Old-pickle shims  (still required – do NOT remove)
